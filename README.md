@@ -1,1 +1,1 @@
-# sportsManagement
+# Sports Management
