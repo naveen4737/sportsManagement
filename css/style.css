@@ -1,0 +1,261 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    body {
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    body>div {
+        overflow-x: hidden;
+        /* did it so, because overflow-x: hidden is ignored by mobile browsers in body tag */
+        min-height: 100vh;
+        position: relative;
+    }
+    
+    a {
+        outline: none;
+    }
+    
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none !important;
+    }
+    
+    input:focus,
+    input.form-control:focus {
+        outline: none !important;
+        outline-width: 0 !important;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    
+    textarea:focus,
+    textarea.form-control:focus {
+        outline: none !important;
+        outline-width: 0 !important;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
+    
+    #home {
+        background: linear-gradient(to right, rgba(37, 92, 32, 0.8), rgba(30, 67, 86, 0.6)), url("../img/jumbo.jpg") center top no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 50px;
+        padding-left: 50px;
+        width: 100%;
+        height: 100vh;
+        background-position: 100% 50%;
+        background-size: cover;
+        text-align: center;
+    }
+    
+    #home h2 {
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        letter-spacing: 2px;
+    }
+    
+    #home button {
+        margin-top: 20px;
+        color: white;
+        font-weight: bold;
+        padding: 15px;
+        background: none;
+        border: 2px solid white;
+        letter-spacing: 5px;
+    }
+    
+    #home button:hover {
+        color: black;
+        padding: 15px;
+        background: white;
+        border: 2px solid white;
+        transition: all 0.2s ease-in;
+    }
+    
+    #home-register {
+        padding: 50px 25px;
+        padding-bottom: 200px;
+    }
+    
+    .jumbo {
+        margin-bottom: 80px;
+    }
+    
+    @media screen and (max-width: 991px) {
+        #home {
+            height: 100vh;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        h2 {
+            font-weight: 100;
+            font-size: 29px;
+        }
+        #home button {
+            letter-spacing: 2px;
+            padding: 10px 9px;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        h2 {
+            font-size: 22px;
+        }
+    }
+    
+    #message_form {
+        margin-bottom: 100px;
+    }
+    /* -----x---Carousel -----x-----*/
+
+    /* ---------Footer -----------*/
+    
+    #footer {
+        background-color: rgb(9, 6, 39);
+        color: white;
+        padding: 10px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* #footer .footer-main {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+    } */
+    
+    #footer .footer-main .copy .author {
+        color: gold;
+    }
+    /* ----------------------- */
+    
+    table {
+        /* font-family: arial, sans-serif; */
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #e7e5e5;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    th {
+        background-color: #f3eaea;
+    }
+    
+    @media only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* Force table to not be like tables anymore */
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        tbody tr:first-child {
+            display: none;
+        }
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        td {
+            /* Behave  like a "row" */
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            word-wrap: break-word;
+        }
+        td:before {
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 30%;
+            padding-right: 10px;
+            white-space: nowrap;
+            /* border-right: 1px solid #eee; */
+        }
+        /*
+	Label the data
+	*/
+        td:nth-of-type(1):before {
+            content: "Name";
+        }
+        td:nth-of-type(2):before {
+            content: "Email";
+        }
+        td:nth-of-type(3):before {
+            content: "Number";
+        }
+        td:nth-of-type(4):before {
+            content: "Stream";
+        }
+        td:nth-of-type(5):before {
+            content: "Sports";
+        }
+    }
+
+
+    /* ----------Style of register.php----------- */
+
+    .registerheading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .registerheading h1{
+        border-bottom: 2px solid black;
+    }
+    /* -----x----Style of register.php-----x----- */
+
+
+    /* ----------Style of teacherPanel.php----------- */
+    
+    button.logout a {
+        color: white;
+        text-decoration: none;
+    }
+    /* -----x----Style of teacherPanel.php-----x----- */
+
